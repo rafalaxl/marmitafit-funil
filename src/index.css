@@ -1,0 +1,83 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root,
+[data-theme='marmita'] {
+  /* Primitive & Semantic Tokens — Marmita Fit (Organic Emerald × Editorial) */
+  --color-bg-primary: #FAF8F5;
+  --color-bg-secondary: #FFFFFF;
+  --color-bg-subtle: #F0F5F1;
+  --color-bg-dark: #0F291E;
+  --color-bg-dark-elevated: #163829;
+
+  --color-text-primary: #111C16;
+  --color-text-secondary: #3D5245;
+  --color-text-on-dark: #F8FAFC;
+  --color-text-muted-on-dark: #CBD5E1;
+
+  --color-brand-primary: #15803D;
+  --color-brand-soft: #DCFCE7;
+  --color-brand-border: #BBF7D0;
+
+  --color-cta-bg: #16A34A;
+  --color-cta-hover: #15803D;
+  --color-cta-text: #FFFFFF;
+
+  --color-highlight: #D97706;
+  --color-highlight-bg: #FEF3C7;
+  --color-border-subtle: #E2E8E4;
+}
+
+[data-theme='donuts'] {
+  /* Primitive & Semantic Tokens — Baby Donuts (Artisanal Cocoa × Berry) */
+  --color-bg-primary: #FFFBF7;
+  --color-bg-secondary: #FFFFFF;
+  --color-bg-subtle: #FDF2F8;
+  --color-bg-dark: #281117;
+  --color-bg-dark-elevated: #3B1922;
+
+  --color-text-primary: #1F1215;
+  --color-text-secondary: #52383F;
+  --color-text-on-dark: #FFFDFB;
+  --color-text-muted-on-dark: #F3E8EE;
+
+  --color-brand-primary: #BE185D;
+  --color-brand-soft: #FCE7F3;
+  --color-brand-border: #FBCFE8;
+
+  --color-cta-bg: #16A34A;
+  --color-cta-hover: #15803D;
+  --color-cta-text: #FFFFFF;
+
+  --color-highlight: #D97706;
+  --color-highlight-bg: #FEF3C7;
+  --color-border-subtle: #EFE2E6;
+}
+
+@layer base {
+  html {
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+    scroll-behavior: smooth;
+  }
+
+  *:focus-visible {
+    outline: 3px solid var(--color-brand-primary);
+    outline-offset: 2px;
+  }
+}
+
+@keyframes subtlePulse {
+  0%, 100% {
+    transform: scale(1);
+    box-shadow: 0 10px 25px -5px rgba(22, 163, 74, 0.45);
+  }
+  50% {
+    transform: scale(1.015);
+    box-shadow: 0 14px 30px -5px rgba(22, 163, 74, 0.65);
+  }
+}
+
+.cta-pulse {
+  animation: subtlePulse 2.6s infinite ease-in-out;
+}
